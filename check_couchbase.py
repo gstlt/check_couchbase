@@ -29,7 +29,7 @@ This plugin implements two checks:
 1. Cluster overall status: memory and disk usage (-s option)
 2. Per vBucket memory usage (-b option)
 
-See ./check_couchbase.py -h for tedailed option list
+See ./check_couchbase.py -h for detailed options list
 
 Author: Grzegorz "You can call me Greg" Adamowicz (gadamowicz@gstlt.info)
 URL: http://gstlt.info
