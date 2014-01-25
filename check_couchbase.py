@@ -136,7 +136,11 @@ def check_status(hostname, port, user, passwd, warning, critical):
     hdd_percentage = round((hdd_used / hdd_total) * 100, 2)
 
     # get balance status
-    balance_status = j['balanced']
+    try:
+        balance_status = j['balanced']
+    except Exception:
+        print("UNKNOWN - got malformed json from server")
+        sys.exit(nagios_codes['UNKNOWN'])
 
     # We now have all needed data. Do the checking.
 
